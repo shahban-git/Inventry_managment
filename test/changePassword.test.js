@@ -5,7 +5,7 @@ const { ChangePassword } = require('../controllers/ChangePassword'); // Replace 
 chai.use(chaiHttp);
 
 describe('ChangePassword', () => {
-  it('should change password successfully when valid email and password are provided', async () => {
+  it('should change password successfully when valid email and password are provided.', async () => {
     const plainPassword = "654321000001";
 
     const request = {
