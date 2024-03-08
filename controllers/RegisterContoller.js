@@ -18,6 +18,9 @@ const UserRegister = async (req, res, next) => {
 
   try {
     // Check if the email is already present in the database
+    if(email === undefined || email === Null){
+      return res.status(500).send({status_code: "01", status_desc: 'fail', error: 'invalid email id' });
+    }
     const existingUser = await RegisterSchema.findOne({ email }).maxTimeMS(20000);
     if (existingUser) {
       logger.info(`${email} this Email already exists`, { route: '/Register' });

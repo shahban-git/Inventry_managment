@@ -18,6 +18,7 @@ const {
 
 
   
+// router.post('/register',encryptDecryptMiddleware, UserRegister, encryptDecryptMiddleware);
 router.post('/register',encryptDecryptMiddleware, UserRegister, encryptDecryptMiddleware);
 router.post('/login', encryptDecryptMiddleware, userlogin, encryptDecryptMiddleware);
 router.get('/products',TokenValidator,encryptDecryptMiddleware, getAllProducts, encryptDecryptMiddleware);
